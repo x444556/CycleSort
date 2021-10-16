@@ -1,6 +1,6 @@
 namespace Sorting
     {
-        public static class BubbleSort
+        public static class CycleSort
         {
             public static void Sort(ref int[] array, SortingOrder order = SortingOrder.LowestToHighest)
             {
