@@ -8,15 +8,15 @@ namespace Sorting
                 {
                     for (int i = 0; i < array.Length; i++)
                     {
-                        int index = 0;
+                        int highestValue = int.MinValue, index = 0;
                         for (int j = i; j < array.Length; j++)
                         {
-                            if (array[j] > array[index])
+                            if (array[j] > highestValue)
                             {
+                                highestValue = array[j];
                                 index = j;
                             }
                         }
-                        int highestValue = array[index];
                         array[index] = array[i];
                         array[i] = highestValue;
                     }
@@ -25,15 +25,15 @@ namespace Sorting
                 {
                     for (int i = 0; i < array.Length; i++)
                     {
-                        int index = 0;
+                        int highestValue = int.MaxValue, index = 0;
                         for (int j = i; j < array.Length; j++)
                         {
-                            if (array[j] < array[index])
+                            if (array[j] < highestValue)
                             {
+                                highestValue = array[j];
                                 index = j;
                             }
                         }
-                        int highestValue = array[index];
                         array[index] = array[i];
                         array[i] = highestValue;
                     }
